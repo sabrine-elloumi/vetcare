@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avis Clients</title>
+    <link rel="stylesheet" href="projet.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">VetCare</a>
+        <nav class="navigation">
+            <a href="index.html">Accueil</a>
+            <a href="consultations.html">Consultations</a>
+            <a href="chirurgie.html">Chirurgie</a>
+            <a href="vaccinations.html">Vaccinations</a>
+        </nav>
+    </header>
+    <section class="reviews">
+        <h1>Avis Clients</h1>
+        <div id="reviews-list">
+            <!-- Client reviews will appear here -->
+        </div>
+        <form id="review-form">
+            <h2>Laissez un avis</h2>
+            <textarea id="review-text" placeholder="Écrivez votre avis ici..." required></textarea>
+            <label for="rating">Évaluez-nous :</label>
+            <select id="rating" required>
+                <option value="5">5 étoiles</option>
+                <option value="4">4 étoiles</option>
+                <option value="3">3 étoiles</option>
+                <option value="2">2 étoiles</option>
+                <option value="1">1 étoile</option>
+            </select>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+    <script src="reviews.js"></script>
+</body>
+</html>

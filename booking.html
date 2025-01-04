@@ -1,0 +1,172 @@
+<!--<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prendre un rendez-vous</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .modal {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .modal-content {
+            text-align: left;
+        }
+
+        .close-btn {
+            float: right;
+            font-size: 1.5rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        td label {
+            display: inline-block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"], select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="window.history.back()">&times;</span>
+            <h2>Prendre un rendez-vous</h2>
+            <form action="#" method="post">
+                <table>
+                    <tr>
+                        <td><label for="client-name">Nom du client:</label></td>
+                        <td><input type="text" id="client-name" name="client-name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="client-id">ID:</label></td>
+                        <td><input type="text" id="client-id" name="client-id" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="pet-name">Nom de l'animal:</label></td>
+                        <td><input type="text" id="pet-name" name="pet-name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="pet-type">Type d'animal:</label></td>
+                        <td>
+                            <select id="pet-type" name="pet-type" required>
+                                <option value="chien">Chien</option>
+                                <option value="chat">Chat</option>
+                                <option value="oiseau">Oiseau</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center;">
+                            <button type="submit">Envoyer</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+</html>-->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prendre un rendez-vous</title>
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="window.history.back()">&times;</span>
+            <h2>Prendre un rendez-vous</h2>
+            <form action="#" method="post">
+                <table>
+                    <tr>
+                        <td><label for="client-name">Nom du client:</label></td>
+                        <td><input type="text" id="client-name" name="client-name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="client-id">ID:</label></td>
+                        <td><input type="text" id="client-id" name="client-id" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="pet-name">Nom de l'animal:</label></td>
+                        <td><input type="text" id="pet-name" name="pet-name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="pet-type">Type d'animal:</label></td>
+                        <td>
+                            <select id="pet-type" name="pet-type" onchange="showOtherField()" required>
+                                <option value="chien">Chien</option>
+                                <option value="chat">Chat</option>
+                                <option value="oiseau">Oiseau</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr id="other-animal-row" style="display: none;">
+                        <td><label for="other-animal">Précisez:</label></td>
+                        <td><input type="text" id="other-animal" name="other-animal"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center;">
+                            <button type="submit">Envoyer</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <script src="booking.js"></script>
+</body>
+</html>
+
+
